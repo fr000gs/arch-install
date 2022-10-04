@@ -117,38 +117,38 @@ pacman -S --noconfirm vim neofetch htop xorg xorg-xinit git ttf-cascadia-code fi
 mkdir /home/gavin/.config
 
 # dwm
-git clone https://github.com/CalvinKev/dwm.git /mnt/home/gavin/.config/dwm
-make -C /mnt/home/gavin/.config/dwm clean install
+git clone https://github.com/CalvinKev/dwm.git /home/gavin/.config/dwm
+make -C /home/gavin/.config/dwm clean install
 
 # st
-git clone https://github.com/CalvinKev/st.git /mnt/home/gavin/.config/st
-make -C /mnt/home/gavin/.config/st clean install
+git clone https://github.com/CalvinKev/st.git /home/gavin/.config/st
+make -C /home/gavin/.config/st clean install
 
-mkdir /mnt/home/gavin/Downloads
-mkdir /mnt/home/gavin/Documents
-mkdir -p /mnt/home/gavin/Pictures/Wallpapers
-mkdir /mnt/home/gavin/Videos
-mkdir /mnt/home/gavin/Scripts
+mkdir /home/gavin/Downloads
+mkdir /home/gavin/Documents
+mkdir -p /home/gavin/Pictures/Wallpapers
+mkdir /home/gavin/Videos
+mkdir /home/gavin/Scripts
 
 # wallpapers
-git clone https://github.com/CalvinKev/wallpapers.git /mnt/home/gavin/Pictures/wallpapers
-rm -rf /mnt/home/gavin/Pictures/wallpapers/.git
-rm -rf /mnt/home/gavin/Pictures/wallpapers/LICENSE
-rm -rf /mnt/home/gavin/Pictures/wallpapers/README.md
+git clone https://github.com/CalvinKev/wallpapers.git /home/gavin/Pictures/wallpapers
+rm -rf /home/gavin/Pictures/wallpapers/.git
+rm -rf /home/gavin/Pictures/wallpapers/LICENSE
+rm -rf /home/gavin/Pictures/wallpapers/README.md
 
 # dotfiles
-git clone https://github.com/CalvinKev/dotfiles.git /mnt/home/gavin/dotfiles
-mkdir -p /mnt/home/gavin/.config/alacritty
-mv /mnt/home/gavin/dotfiles/alacritty/alacritty.yml /mnt/home/gavin/.config/alacritty
-mkdir -p /mnt/home/gavin/.config/sxhkd
-mv /mnt/home/gavin/dotfiles/sxhkd/sxhkdrc-standalone /mnt/home/gavin/.config/sxhkd
-mv /mnt/home/gavin/.config/sxhkd/sxhkdrc-standalone /mnt/home/gavin/.config/sxhkd/sxhkdrc
-mv /mnt/home/gavin/dotfiles/shells/.zshrc /mnt/home/gavin
-mv /mnt/home/gavin/dotfiles/xorg/xinitrc /mnt/home/gavin
-mv /mnt/home/gavin/xinitrc /mnt/home/gavin/.xinitrc
-mv /mnt/home/gavin/dotfiles/scripts/date.sh /mnt/home/gavin/Scripts
-chmod +x /mnt/home/gavin/Scripts/date.sh
-rm -rf /mnt/home/gavin/dotfiles
+git clone https://github.com/CalvinKev/dotfiles.git /home/gavin/dotfiles
+mkdir -p /home/gavin/.config/alacritty
+mv /home/gavin/dotfiles/alacritty/alacritty.yml /home/gavin/.config/alacritty
+mkdir -p /home/gavin/.config/sxhkd
+mv /home/gavin/dotfiles/sxhkd/sxhkdrc-standalone /home/gavin/.config/sxhkd
+mv /home/gavin/.config/sxhkd/sxhkdrc-standalone /home/gavin/.config/sxhkd/sxhkdrc
+mv /home/gavin/dotfiles/shells/.zshrc /home/gavin
+mv /home/gavin/dotfiles/xorg/xinitrc /home/gavin
+mv /home/gavin/xinitrc /home/gavin/.xinitrc
+mv /home/gavin/dotfiles/scripts/date.sh /home/gavin/Scripts
+chmod +x /home/gavin/Scripts/date.sh
+rm -rf /home/gavin/dotfiles
 
 echo "Installation Complete! Please reboot now.
 
