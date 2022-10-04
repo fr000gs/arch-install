@@ -110,7 +110,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Enable dhcpcd.service
 systemctl enable dhcpcd.service
 
-pacman -S --noconfirm vim neofetch htop xorg xorg-xinit git ttf-cascadia-code firefox picom git dmenu mpv zsh sxhkd maim xclip scrot alacritty pipewire lib32-pipewire pipewire-alsa pipewire-pulse pavucontrol
+pacman -S --noconfirm vim neofetch htop xorg xorg-xinit git ttf-cascadia-code firefox picom git dmenu mpv zsh sxhkd maim xclip scrot alacritty pipewire pipewire-alsa pipewire-pulse pavucontrol
 
 #part3
 
