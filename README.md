@@ -1,4 +1,4 @@
-### arch-install
+# arch-install
 ## My Arch install script
 
-# Warning: INCOMPLETE AND UNTESTED
+### Warning: INCOMPLETE AND UNTESTED
