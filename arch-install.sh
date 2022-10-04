@@ -154,3 +154,6 @@ echo '\n'
 echo '\n'
 echo '\n'
 echo "Installation Complete! Please reboot now.
+
+sleep 2s
+exit
