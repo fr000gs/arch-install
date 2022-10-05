@@ -117,7 +117,7 @@ pacman -S --noconfirm feh vim neofetch htop xorg xorg-xinit git ttf-cascadia-cod
 mkdir /home/gavin/.config
 
 # dwm
-git clone https://github.com/CalvinKev/dwm.git /home/gavin/.config/dwm
+git clone https://github.com/CalvinKev/dwm-arch.git /home/gavin/.config/dwm
 make -C /home/gavin/.config/dwm clean install
 rm -rf /home/gavin/.config/dwm/.git*
 rm -rf /home/gavin/.config/dwm/LICENSE
