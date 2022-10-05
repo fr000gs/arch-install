@@ -110,7 +110,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Enable dhcpcd.service
 systemctl enable dhcpcd.service
 
-pacman -S --noconfirm vim neofetch htop xorg xorg-xinit git ttf-cascadia-code firefox picom git dmenu mpv zsh sxhkd maim xclip scrot alacritty pipewire pipewire-alsa pipewire-pulse pavucontrol
+pacman -S --noconfirm feh vim neofetch htop xorg xorg-xinit git ttf-cascadia-code firefox picom git dmenu mpv zsh sxhkd maim xclip scrot alacritty pipewire pipewire-alsa pipewire-pulse pavucontrol
 
 #part3
 
@@ -119,14 +119,21 @@ mkdir /home/gavin/.config
 # dwm
 git clone https://github.com/CalvinKev/dwm.git /home/gavin/.config/dwm
 make -C /home/gavin/.config/dwm clean install
+rm -rf /home/gavin/.config/dwm/.git*
+rm -rf /home/gavin/.config/dwm/LICENSE
+rm -rf /home/gavin/.config/dwm/README.md
+rm -rf /home/gavin/.config/dwm/config.h
 
 # st
 git clone https://github.com/CalvinKev/st.git /home/gavin/.config/st
 make -C /home/gavin/.config/st clean install
+rm -rf /home/gavin/.config/st/.git*
+rm -rf /home/gavin/.config/st/LICENSE
+rm -rf /home/gavin/.config/st/README.md
+rm -rf /home/gavin/.config/st/config.h
 
 mkdir /home/gavin/Downloads
 mkdir /home/gavin/Documents
-mkdir -p /home/gavin/Pictures/Wallpapers
 mkdir /home/gavin/Videos
 mkdir /home/gavin/Scripts
 
@@ -138,17 +145,43 @@ rm -rf /home/gavin/Pictures/wallpapers/README.md
 
 # dotfiles
 git clone https://github.com/CalvinKev/dotfiles.git /home/gavin/dotfiles
+# alacritty
 mkdir -p /home/gavin/.config/alacritty
 mv /home/gavin/dotfiles/alacritty/alacritty.yml /home/gavin/.config/alacritty
+# sxhkd
 mkdir -p /home/gavin/.config/sxhkd
 mv /home/gavin/dotfiles/sxhkd/sxhkdrc-standalone /home/gavin/.config/sxhkd
 mv /home/gavin/.config/sxhkd/sxhkdrc-standalone /home/gavin/.config/sxhkd/sxhkdrc
+# zsh
 mv /home/gavin/dotfiles/shells/.zshrc /home/gavin
+# .xinitrc
 mv /home/gavin/dotfiles/xorg/xinitrc /home/gavin
 mv /home/gavin/xinitrc /home/gavin/.xinitrc
+# date.sh
 mv /home/gavin/dotfiles/scripts/date.sh /home/gavin/Scripts
 chmod +x /home/gavin/Scripts/date.sh
+# pacman.conf
+rm -rf /etc/pacman.conf
+mv /home/gavin/dotfiles/arch/pacman.conf /etc/
+# GRUB
+rm -rf /etc/default/grub
+mv /home/gavin/dotfiles/arch/grub /etc/default/
+# remove dotfiles directory
 rm -rf /home/gavin/dotfiles
+
+chown gavin /home/gavin/Downloads
+chown gavin /home/gavin/Documents
+chown gavin /home/gavin/Pictures
+chown gavin /home/gavin/Pictures/wallpapers/*
+chown gavin /home/gavin/Videos
+chown gavin /home/gavin/.config/dwm
+chown gavin /home/gavin/.config/dwm/*
+chown gavin /home/gavin/.config/st
+chown gavin /home/gavin/.config/st/*
+chown gavin /home/gavin/.config/alacritty
+chown gavin /home/gavin/.config/alacritty/*
+chown gavin /home/gavin/.config/sxhkd
+chown gavin /home/gavin/.config/sxhkd/*
 
 echo "Installation Complete! Please reboot now.
 
