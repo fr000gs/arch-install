@@ -188,6 +188,9 @@ chown gavin /home/gavin/.config/sxhkd/*
 chown gavin /home/gavin/.config/picom
 chown gavin /home/gavin/.config/picom/*
 
+pacman -Syu
+pacman -S --noconfirm lib32-pipewire
+
 echo "Installation Complete! Please reboot now.
 
 sleep 2s
