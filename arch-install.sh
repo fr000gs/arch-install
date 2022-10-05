@@ -205,7 +205,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Install Paru (AUR helper)
 git clone https://aur.archlinux.org/paru.git /home/gavin/paru
 cd /home/gavin/paru
-makepkg -si
+makepkg -fsri
 rm -rf /home/gavin/paru
 
 printf '\033c'
