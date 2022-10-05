@@ -38,12 +38,14 @@ read bootpartition
 mkfs.xfs $bootpartition
 
 # Boot partition
-echo "Enter boot partition (EFI): "
+echo "Enter the /dev path of EFI partition: "
 read efipartition
 mkfs.fat -F32 $efipartition
 
 # Mount root partition to /mnt
 mount $partition /mnt
+mount $bootpartition /mnt/boot
+mount $efipartition /mnt/efi
 # Pacstrap the needed packages
 pacstrap /mnt base base-devel linux-zen linux-firmware
 # Generate an /etc/fstab and append it to /mnt/etc/fstab
@@ -96,7 +98,6 @@ pacman --noconfirm -S grub efibootmgr
 lsblk
 #echo "Enter EFI partition: "
 #read efipartition
-mount $efipartition --mkdir /efi
 grub-install --target=x86_64-efi --efi-dir=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
@@ -104,7 +105,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable dhcpcd.service
 systemctl enable iwd.service
 
-pacman -S --noconfirm vim neofetch htop xorg xorg-xinit firefox xclip libreoffice-fresh pipewire pipewire-alsa pipewire-pulse pavucontrol plasma plasma-wayland-session kde-applications 
+pacman -S --noconfirm vim neofetch htop xorg xorg-xinit firefox xclip libreoffice-fresh pipewire pipewire-alsa pipewire-pulse pavucontrol plasma plasma-wayland-session
 
 systemctl enable sddm.service
 systemctl enable NetworkManager.service
