@@ -104,7 +104,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable dhcpcd.service
 systemctl enable iwd.service
 
-pacman -S --noconfirm vim neofetch htop xorg xorg-xinit firefox xclip pipewire pipewire-alsa pipewire-pulse pavucontrol plasma plasma-wayland-session kde-applications 
+pacman -S --noconfirm vim neofetch htop xorg xorg-xinit firefox xclip libreoffice-fresh pipewire pipewire-alsa pipewire-pulse pavucontrol plasma plasma-wayland-session kde-applications 
 
 systemctl enable sddm.service
 systemctl enable NetworkManager.service
