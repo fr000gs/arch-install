@@ -1,4 +1,3 @@
-# arch-install
-## My Arch install script
+### arch-install
 
-### Warning: INCOMPLETE AND UNTESTED
+This is my Arch installation script. It will install dwm and comes with everything I need. (even nvidia drivers!)
