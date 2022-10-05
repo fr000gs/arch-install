@@ -9,7 +9,7 @@
 #part1
 printf '\033c'
 
-  echo "Welcome to fr000gs Arch installer."
+echo "Welcome to fr000gs Arch installer."
 
 # Change ParallelDownloads from "5" to "10"
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
@@ -56,15 +56,18 @@ arch-chroot /mnt
 ####################################################################################
 # Install Intel Microcode
 pacman -S --noconfirm intel-ucode dhcpcd iwd
+
 # Change ParallelDownloads from 5 to 15
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
+
 # Set timezone
 echo "Enter timezone (format Continent/City): "
 read $timezone
 timedatectl set-timezone $timezone
 ln -sf /usr/share/zoneinfo/$timezone /etc/localtime
 # Sync hardware clock with Arch Linux
-hwclock --systohc
+hwclock -lw
+
 # Set locale
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 # Generate locale
@@ -86,7 +89,7 @@ passwd
 # Create user account
 echo "Enter name of sudo user: "
 read $user
-useradd -mG sudo, wheel,audio,video $user
+useradd -mG sudo,wheel,audio,video $user
 # Set user password
 passwd $user
 # Configure sudo
@@ -127,7 +130,7 @@ cd pikaur
 makepkg -fsri
 
 printf '\033c'
-echo "Installation Complete! Please reboot now.
+echo "Installation Complete! Rebooting: (Press return): "
+read $aaa
 
-sleep 2s
-exit
+systemctl reboot
