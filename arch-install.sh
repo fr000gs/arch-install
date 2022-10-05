@@ -214,5 +214,3 @@ echo "Installation Complete! Please reboot now.
 
 sleep 2s
 exit
-
-# Thanks again to Bugswriter for a lot of the code in this script!
