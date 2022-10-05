@@ -193,6 +193,7 @@ chown gavin /home/gavin/.config/picom
 chown gavin /home/gavin/.config/picom/*
 chown gavin /home/gavin/.config
 chown gavin /home/gavin/.config/*
+chown gavin /home/gavin/.xinitrc
 
 # Update after enabling multilib and other pacman.conf options
 pacman -Syu
