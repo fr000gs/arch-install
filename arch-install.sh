@@ -206,7 +206,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 git clone https://aur.archlinux.org/paru.git /home/gavin/paru
 cd /home/gavin/paru
 makepkg -fsri
-rm -rf /home/gavin/paru
+#rm -rf /home/gavin/paru
 
 printf '\033c'
 echo "Installation Complete! Please reboot now.
