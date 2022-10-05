@@ -166,6 +166,9 @@ mv /home/gavin/dotfiles/arch/pacman.conf /etc/
 # GRUB
 rm -rf /etc/default/grub
 mv /home/gavin/dotfiles/arch/grub /etc/default/
+# picom
+mkdir -p /home/gavin/.config/picom
+mv /home/gavin/dotfiles/picom/picom.conf /home/gavin/.config/picom
 # remove dotfiles directory
 rm -rf /home/gavin/dotfiles
 
@@ -182,6 +185,8 @@ chown gavin /home/gavin/.config/alacritty
 chown gavin /home/gavin/.config/alacritty/*
 chown gavin /home/gavin/.config/sxhkd
 chown gavin /home/gavin/.config/sxhkd/*
+chown gavin /home/gavin/.config/picom
+chown gavin /home/gavin/.config/picom/*
 
 echo "Installation Complete! Please reboot now.
 
