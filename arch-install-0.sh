@@ -14,4 +14,4 @@ timedatectl set-ntp true
 # Select drive to partition
 lsblk
 
-echo "Partition your drive, then run bash arch-install-1.sh"
+echo "Partition your drive and mount the partitions in /mnt, then run bash arch-install-1.sh"
