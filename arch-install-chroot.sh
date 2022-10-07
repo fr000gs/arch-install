@@ -1,6 +1,8 @@
 #!/bin/bash
-echo "If you are sure you are connected to the internet; have partitioned your drive, pacstrapped linux, linux-firmware, base (and bade-devel), AND ARE RUNNING IN CHROOT, press RETURN else Control-C"
-read aaa
+# Pacstrap the needed packages
+pacstrap /mnt base base-devel linux-zen linux-firmware
+# Generate an /etc/fstab and append it to /mnt/etc/fstab
+genfstab -U /mnt > /mnt/etc/fstab
 
 # Change ParallelDownloads from 5 to 15
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
