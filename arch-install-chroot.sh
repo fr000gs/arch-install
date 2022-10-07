@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# https://github.com/fr000gs/arch-install
+# Licensed under MPL2
+
 # Pacstrap the needed packages
 pacstrap /mnt base base-devel linux-zen linux-firmware
 # Generate an /etc/fstab and append it to /mnt/etc/fstab
