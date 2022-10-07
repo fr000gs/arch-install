@@ -18,8 +18,6 @@ Now partition your drive and mount the partitions in /mnt. The boot, efi and roo
 
 Now run
 
-    bash arch-install-1.sh
-    arch-chroot /mnt
     bash arch-install-chroot.sh
     
 Now installation is complete.
