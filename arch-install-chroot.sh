@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "If you are sure you are connected to the internet; have partitioned your drive, pacstrapped linux, linux-firmware, base (and bade-devel), AND ARE RUNNING IN CHROOT, press RETURN else Control-C"
 read aaa
 
