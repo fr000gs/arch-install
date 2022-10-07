@@ -1,6 +1,7 @@
 printf '\033c'
 
-echo "Welcome to fr000gs Arch installer."
+echo "Welcome to fr000gs Arch installer. Make sure you have Internet access. (Press return): "
+read a
 
 # Change ParallelDownloads from "5" to "10"
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
