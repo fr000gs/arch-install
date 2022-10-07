@@ -82,5 +82,3 @@ makepkg -fsri
 printf '\033c'
 echo "Installation Complete! Exiting: (Press return): "
 read aaa
-
-exit
