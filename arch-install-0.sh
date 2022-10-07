@@ -1,3 +1,8 @@
+#!/bin/bash
+#
+# https://github.com/fr000gs/arch-install
+# Licensed under MPL2
+
 printf '\033c'
 
 echo "Welcome to fr000gs Arch installer. Make sure you have Internet access. (Press return): "
